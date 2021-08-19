@@ -11,6 +11,8 @@ namespace vlc {
 		VlcWindow(int w, int h, std::string name);
 		~VlcWindow();
 
+		bool shouldClose() { return glfwWindowShouldClose(window); }
+
 	private:
 		void initWindow();
 

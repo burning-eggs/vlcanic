@@ -5,6 +5,11 @@ namespace vlc {
 		initWindow();
 	}
 
+	VlcWindow::~VlcWindow() {
+		glfwDestroyWindow(window);
+		glfwTerminate();
+	}
+
 	void VlcWindow::initWindow() {
 		glfwInit();
 
